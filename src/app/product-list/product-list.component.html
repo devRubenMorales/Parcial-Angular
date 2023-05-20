@@ -1,0 +1,36 @@
+<h2>Lista de productos</h2>
+
+<label>Filtrar por animal:</label>
+<br>
+<select [(ngModel)]="selectedAnimal" (ngModelChange)="filterProducts()">
+  <option value="todos">Todos</option>
+  <option value="Perro">Perro</option>
+  <option value="Gato">Gato</option>
+  <option value="Pájaro">Pájaro</option>
+</select>
+
+<!-- Utilizando pipe -->
+<!-- <ul>
+    <li *ngFor="let product of products | filterByAnimal:selectedAnimal; let i = index">
+      {{ product.name }} ({{ product.animal }})
+      <button (click)="removeProduct(product.id)">Eliminar</button>
+    </li>
+</ul> -->
+
+<ul>
+  <li *ngFor="let product of filteredProducts; let i = index">
+    {{ product.name }} ({{ product.animal }})
+    <button (click)="removeProduct(product.id)">Eliminar</button>
+  </li>
+</ul>
+
+<h3>Agregar producto</h3>
+<label>Nombre del producto:</label>
+<br>
+<input type="text" [(ngModel)]="newProductName">
+<br>
+<label>Animal:</label>
+<br>
+<input type="text" [(ngModel)]="newProductAnimal">
+<br>
+<button (click)="addProduct()">Agregar</button>
