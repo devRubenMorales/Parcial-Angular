@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 export class ProductListComponent {
   selectedAnimal: string = 'todos'; // Variable que almacena el animal seleccionado en el filtro
   products = [ // Lista de productos
-    { name: 'Comida para perros', animal: 'Perro', id: 1},
-    { name: 'Comida para gatos', animal: 'Gato', id: 2 },
-    { name: 'Comida para pájaros', animal: 'Pájaro',id: 3 },
-    { name: 'Comida para perros 2', animal: 'Perro',id: 4 },
-    { name: 'Comida para gatos 2', animal: 'Gato',id: 5 },
-    { name: 'Comida para pájaros 2', animal: 'Pájaro',id: 6 },
+    { name: 'Comida para perros', animal: 'perro', id: 1},
+    { name: 'Comida para gatos', animal: 'gato', id: 2 },
+    { name: 'Comida para pájaros', animal: 'pajaro',id: 3 },
+    { name: 'Comida para perros 2', animal: 'perro',id: 4 },
+    { name: 'Comida para gatos 2', animal: 'gato',id: 5 },
+    { name: 'Comida para pájaros 2', animal: 'pajaro',id: 6 },
   ];
   newProductName: string = ''; // Variable que almacena el nombre del nuevo producto a agregar
   newProductAnimal: string = ''; // Variable que almacena el animal del nuevo producto a agregar
